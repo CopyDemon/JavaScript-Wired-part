@@ -9,12 +9,14 @@
 </head>
 
 <body>
+
+
     <form action="">
         <input type="text" name="Display" id="display">
         <br>
 
-        <input type="button" value="1" id="one" onclick="numberFunction()">
-        <input type="button" value="2" id="two">
+        <input type="button" value="1" name='1' id="one" onclick="getNumber()">
+        <input type="button" value="2" name='2' id="two"  onclick="getNumber()">
         <input type="button" value="3" id="three">
         <br>
         <input type="button" value="4" id="four">
@@ -48,6 +50,21 @@
         let numberFunction = () => {
             display.value = 1;
         }
+
+        let numberArr = [1,2,3,4,5,6,7,8,9,0];
+
+        let op = "*";
+        
+        let getNumber =()=>{
+            let gettedNumber = document.querySelectorAll("input");
+            if(gettedNumber.value == '1'){
+                console.log(1);
+            }else if(gettedNumber.value == '2'){
+                console.log(2);
+            }
+        }  
+        
+        
 
     </script>
 </body>
