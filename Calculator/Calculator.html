@@ -6,62 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Calculator</title>
+    <style>
+        .button {
+            width: 50px;
+            height: 20px;
+        }
+
+        .button:nth-child(18) {
+            width: 150px;
+        }
+    </style>
 </head>
 
 <body>
-
-
-    <!-- <form>
-        <table>
-            <tr>
-                <td><input type="text" name="display" value="0" id="display"></td>
-            </tr>
-        </table>
-
-        <table>
-        <tr> 
-            <td><input type="button" value="1" name="one"  class="button"></td>
-            <td><input type="button" value="2" name="two" class="button"></td>
-            <td><input type="button" value="3" name="three" class="button"></td>
-            <td><input type="button" value="+" name="plus" class="button"></td>
-        </tr>
-        </table>
-        
-
-    </form> -->
-
-
     <script>
-        this.onload=()=>{
-            
-        }
+        let display = document.createElement("input");
+        document.body.appendChild(display);
+        document.body.appendChild(document.createElement("br"));
 
-        let buttonArr = [1,2,3,4,5,6,7,8,9,0];
-
-        for(let i of buttonArr){
+        let buttonArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+        for (let i of buttonArr) {
             let numberButton = document.createElement("input");
             numberButton.type = "button";
             numberButton.value = i;
-            document.body.appendChild(numberButton); 
-            
+            numberButton.className = "button"
+            document.body.appendChild(numberButton);
 
-            if(i%3 == 0){
+
+            if (i % 3 == 0) {
                 let breakMark = document.createElement("br");
-                document.body.appendChild("breakMark");
-            }else{
+                document.body.appendChild(breakMark); //remove the quotes
+            } else {
                 console.log(i);
             }
         }
-
-        
-        
-        
-        
-
-
-        // document.querySelector(".button").addEventListener('click',()=>{
-        //     alert("button clicked")
-        // })
     </script>
 </body>
 
